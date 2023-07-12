@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "build:prod": "vue-cli-service build --mode production",
     "build:sit": "vue-cli-service build --mode production.sit",
-    "build:uat": "vue-cli-service build --mode production.uat"
+    "build:uat": "vue-cli-service build --mode production.uat",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -29,7 +31,8 @@
     "vue-cron": "^1.0.9",
     "vue-i18n": "^8.18.2",
     "vue-router": "3.0.7",
-    "vuex": "^3.5.1"
+    "vuex": "^3.5.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.6",
@@ -46,5 +49,6 @@
   "engines": {
     "node": ">= 8.11.1",
     "npm": ">= 5.6.0"
-  }
+  },
+  "snyk": true
 }
